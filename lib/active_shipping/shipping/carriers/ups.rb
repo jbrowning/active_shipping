@@ -305,8 +305,6 @@ module ActiveMerchant
         
         if success
           tracking_number, origin, destination, status_code, status_description, scheduled_delivery_date = nil
-          delivered, exception = false
-          exception_event = nil
           shipment_events = []
           status = {}
 
@@ -387,9 +385,6 @@ module ActiveMerchant
           :status_description => status_description,
           :scheduled_delivery_date => scheduled_delivery_date,
           :shipment_events => shipment_events,
-          :delivered => delivered,
-          :exception => exception,
-          :exception_event => exception_event,
           :origin => origin,
           :destination => destination,
           :tracking_number => tracking_number)
